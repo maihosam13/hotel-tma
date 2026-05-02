@@ -1,0 +1,421 @@
+/* --- 4.3 CSS for a professional design --- */
+
+/* Basic Reset */
+:root {
+    --primary-color: #2c3e50; /* Dark blue-grey */
+    --accent-color: #c0392b; /* Deep red accent */
+    --text-color: #333;
+    --light-bg: #f4f7f6;
+    --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Common Components */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.btn, .btn-text {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #e04434;
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #b0bec5;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* --- index.html (Main Page) Specifics --- */
+.hero-index {
+    height: 70vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/736x/22/e7/42/22e7426e9fcd95c88d1fab3f3fbbb45d.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+/* Vision Mission Section */
+.vision-mission-section {
+    display: flex;
+    gap: 30px;
+}
+
+.vision-mission-section .card {
+    flex: 1;
+}
+
+/* Developer Section */
+.developer-section .dev-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.dev-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    width: 250px;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- categories.html (Hotels Categories) Specifics --- */
+.categories-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.categories-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid for 2) Graphical User Interface */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.category-card h3, .category-card p, .category-card .btn-text {
+    padding: 15px 20px;
+}
+
+.category-card p {
+    font-size: 0.95rem;
+    color: #666;
+    flex-grow: 1; /* Pushes btn-text to the bottom */
+}
+
+.category-card .btn-text {
+    width: 100%;
+    border-radius: 0;
+    margin-top: auto;
+}
+
+/* --- rooms.html (Rooms Details & Reservation) Specifics --- */
+.rooms-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rooms-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Fulfills 3) Room details and 3.1, 3.2, 3.3 */
+.rooms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.room-card {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.room-image {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.room-details {
+    flex: 1;
+}
+
+.room-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.room-features {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.room-features li {
+    background-color: var(--light-bg);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.room-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.room-price .price {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Reservation Form (3.4) */
+.reservation-form {
+    padding: 25px;
+    position: sticky;
+    top: 100px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.total-display {
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total-price {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+    .header-container { flex-direction: column; gap: 15px; text-align: center;}
+    nav ul { flex-direction: column; gap: 10px;}
+    .hero-content h1 { font-size: 2.5rem; }
+    .vision-mission-section { flex-direction: column; }
+    .rooms-container { grid-template-columns: 1fr; }
+    .room-card { flex-direction: column; text-align: center;}
+    .room-image { width: 100%; height: 200px;}
+    .room-features { justify-content: center;}
+    .form-group-row { flex-direction: column; gap: 0;}
+    .reservation-form { position: relative; top: 0;}
+}

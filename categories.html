@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotels Categories | Zenith Hotel Booking</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/5c/b0/30/5cb030569ee3ba3170e5c6dbd3aa266c.jpg" alt="Zenith Hotels Logo" />
+            <span class="site-title">Zenith Hotels</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Explore Hotels</a></li>
+                <!-- We can link to specific categories using parameters -->
+                <li><a href="rooms.html?category=Luxury Hotels">Luxury</a></li>
+                <li><a href="rooms.html?category=Beach Resorts">Beach</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="categories-header">
+        <h1>Explore Our Hotel Collections</h1>
+        <p>From opulent stays to convenient hubs, find the perfect fit for your journey.</p>
+    </section>
+
+    <!-- 2) Friendly Graphical User Interface for Hotel Types -->
+    <section class="categories-grid">
+        <!-- 2.1 Luxury Hotels -->
+        <a href="rooms.html?category=Luxury Hotels" class="category-card">
+            <img src="./images/Luxury Hotel.jpg" alt="Luxury Hotels" />
+            <h3>Luxury Hotels</h3>
+            <p>Indulge in opulence and exceptional personalized service.</p>
+            <span class="btn-text">Explore</span>
+        </a>
+
+        <!-- 2.2 Business Hotels -->
+        <a href="rooms.html?category=Business Hotels" class="category-card">
+            <img src="./images/Business Hotel.jpg" alt="Business Hotels" />
+            <h3>Business Hotels</h3>
+            <p>Efficiency, connectivity, and modern amenities for professional stays.</p>
+            <span class="btn-text">Explore</span>
+        </a>
+
+        <!-- 2.3 Family Hotels -->
+        <a href="rooms.html?category=Family Hotels" class="category-card">
+            <img src="./images/Family Hotel.jpg" alt="Family Hotels" />
+            <h3>Family Hotels</h3>
+            <p>Spacious accommodations and fun activities for all ages.</p>
+            <span class="btn-text">Explore</span>
+        </a>
+
+        <!-- 2.4 Budget Hotels -->
+        <a href="rooms.html?category=Budget Hotels" class="category-card">
+            <img src="./images/Budget Hotel.jpg" alt="Budget Hotels" />
+            <h3>Budget Hotels</h3>
+            <p>Affordable comfort and essential amenities without compromise.</p>
+            <span class="btn-text">Explore</span>
+        </a>
+
+        <!-- 2.5 Beach Resorts -->
+        <a href="rooms.html?category=Beach Resorts" class="category-card">
+            <img src="./images/Beach Hotel.jpg" alt="Beach Resorts" />
+            <h3>Beach Resorts</h3>
+            <p>Escape to sun-drenched shores and paradise getaways.</p>
+            <span class="btn-text">Explore</span>
+        </a>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Zenith Hotels. All rights reserved. | Graduation Project by [Mai H]</p>
+    </div>
+</footer>
+
+<script src="main.js/main.js"></script>
+</body>
+</html>

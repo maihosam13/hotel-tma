@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Details &amp; Reservation | Zenith Hotel Booking</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body onload="setupRoomsPage()"> <!-- Load dynamic content on startup -->
+
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/5c/b0/30/5cb030569ee3ba3170e5c6dbd3aa266c.jpg" alt="Zenith Hotels Logo" />
+            <span class="site-title">Zenith Hotels</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Explore Hotels</a></li>
+                <li><a href="#reservation">Book This Room</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="rooms-header">
+        <h1 id="category-title">Select Your Perfect Room</h1>
+        <p>Explore detailed information and features for rooms in this category.</p>
+    </section>
+
+    <!-- 3) Rooms Details and 3.4 Reservation page integrated -->
+    <div class="rooms-container">
+        <div id="rooms-list" class="rooms-list">
+            <!-- Room elements will be dynamically inserted here by JavaScript -->
+            <!-- They will fulfill requirements 3.1, 3.2, 3.3 -->
+        </div>
+
+        <aside id="reservation" class="reservation-form card">
+            <h2>Reserve Your Stay</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="room-select">Select Room Type:</label>
+                    <select id="room-select" name="room" required onchange="calculateTotal()">
+                        <option value="" disabled selected>-- Choose a Room --</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="check-in">Check-in:</label>
+                        <input type="date" id="check-in" name="check-in" required onchange="calculateTotal()" />
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out">Check-out:</label>
+                        <input type="date" id="check-out" name="check-out" required onchange="calculateTotal()" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" max="10" value="1" required />
+                </div>
+                
+                <div class="total-display">
+                    <h3>Total Price: <span id="total-price">$0.00</span></h3>
+                </div>
+                
+                <button type="submit" class="btn btn-full">Confirm Reservation</button>
+            </form>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Zenith Hotels. All rights reserved. | Graduation Project by Mai H</p>
+    </div>
+</footer>
+
+<script src="main.js/main.js"></script>
+</body>
+</html>
