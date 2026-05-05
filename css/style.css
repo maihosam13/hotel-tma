@@ -205,34 +205,127 @@ footer p {
 
 /* Contact Section */
 .contact-section {
-    text-align: center;
+    padding: 80px 20px;
+    background-color: #f5f7fa;
 }
 
-.contact-methods {
+/* BOX */
+.contact-box {
+    max-width: 1100px;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-.contact-item {
-    background: #fff;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
-    width: 250px;
+/* LEFT */
+.left {
+    flex: 1;
+    background-color: #0a3d73;
+    color: white;
+    padding: 50px;
 }
 
-.contact-item i {
-    font-size: 2rem;
-    color: var(--accent-color);
+.left h2 {
+    font-size: 28px;
     margin-bottom: 15px;
 }
 
-.contact-item a {
-    color: var(--primary-color);
+.desc {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* INFO */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+.info-item i {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* HOVER */
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(6px);
+}
+
+.info-item:hover i {
+    background: white;
+    color: var(--primary-blue);
+}
+
+.info-item small {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.info-item p {
+    margin: 2px 0 0;
+    font-weight: 600;
+    color: white;
+}
+
+/* RIGHT */
+.right {
+    flex: 1;
+    padding: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form button {
+    background-color: #0a3d73;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #164E8B;
 }
 
 /* --- categories.html (Hotels Categories) Specifics --- */
