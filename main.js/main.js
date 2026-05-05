@@ -102,7 +102,7 @@ const hotelsData = {
         },
          {
             id: "fam-suite",
-            image: "images/room_placeholder_family_1.jpg",
+            image: "https://i.pinimg.com/1200x/61/7d/0a/617d0a93997729aa6e3358a628a21c93.jpg",
             name: "Spacious Family Suite",
             description: "Perfect for families. Two connecting bedrooms, a full kitchen, and a living area. Kids' club access included.",
             features: ["King & Queen Beds", "Kitchenette", "Free Kids Meals", "Washing Machine", "Balcony"],
